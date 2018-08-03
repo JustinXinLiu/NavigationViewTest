@@ -8,19 +8,22 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       mc:Ignorable="d">
 
+    <Page.Resources>
+        <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="Transparent" />
+    </Page.Resources>
+
     <Grid>
         <controls:NavigationView x:Name="MainNav"
-                                 CompactModeThresholdWidth="1008"
-                                 ExpandedModeThresholdWidth="1007"
                                  Header="Welcome"
-                                 IsBackButtonVisible="Collapsed">
+                                 IsBackButtonVisible="Collapsed"
+                                 ItemInvoked="MainNav_OnItemInvoked">
             <controls:NavigationView.MenuItems>
-                <controls:NavigationViewItem Content="HOME" />
-                <controls:NavigationViewItem Content="PRODUCTS" />
-                <controls:NavigationViewItem Content="ABOUT" />
+                <controls:NavigationViewItem Content="HOME" Tag="BlankPage1" />
+                <controls:NavigationViewItem Content="PRODUCTS" Tag="BlankPage2" />
+                <controls:NavigationViewItem Content="ABOUT" Tag="BlankPage3" />
             </controls:NavigationView.MenuItems>
 
-            <Frame x:Name="ContentFrame" Margin="24" />
+            <Frame x:Name="ContentFrame" />
         </controls:NavigationView>
     </Grid>
 </Page>

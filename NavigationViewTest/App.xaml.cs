@@ -42,14 +42,14 @@ namespace NavigationViewTest
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            //draw into the title bar
-            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+            ////draw into the title bar
+            //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
-            //remove the solid-colored backgrounds behind the caption controls and system back button
-            var viewTitleBar = ApplicationView.GetForCurrentView().TitleBar;
-            viewTitleBar.ButtonBackgroundColor = Colors.Transparent;
-            viewTitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-            viewTitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
+            ////remove the solid-colored backgrounds behind the caption controls and system back button
+            //var viewTitleBar = ApplicationView.GetForCurrentView().TitleBar;
+            //viewTitleBar.ButtonBackgroundColor = Colors.Transparent;
+            //viewTitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+            //viewTitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
 
             Frame rootFrame = Window.Current.Content as Frame;
 
